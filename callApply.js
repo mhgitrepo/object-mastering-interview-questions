@@ -14,6 +14,6 @@ const newObject= {
 // console.log(newObject.firstName);
 newObject.bill(1000);
 newObject.bill(2000);
-// newObject.bill(500);
+newObject.bill(500);
 // console.log(newObject.bill(500));
 console.log(newObject.salary);
