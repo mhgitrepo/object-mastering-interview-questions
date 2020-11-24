@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this - keyword</title>
+</head>
+<body>
+    <p onclick="this.innerText = 'Clicked!'">Click Here!</p>
+    <script>
+        const myObject = {
+            name: 'James William',
+            getFullname: function(){
+                console.log(this);
+                return 'Mr. ' + this.name;
+            }
+        }
+        // myObject.getFullname();
+        const anotherObject = {
+            name: 'Jack Ma',
+        }
+        setTimeout(function(){
+          console.log(this);   
+        }, 1000)
+
+        // anotherObject.getFullname = myObject.getFullname;
+        // console.log(anotherObject.getFullname);
+        // myObject.getFullname();
+        // anotherObject.getFullname();
+
+        function add (a, b){
+            console.log(this);
+            return a + b;
+        }
+        add(12, 13);
+
+        anotherObject.sum = add;
+        anotherObject.sum();
+    </script>
+</body>
+</html>
